@@ -3,11 +3,11 @@ import { renderListWithTemplate } from "./utils.mjs";
 function petCardTemplate(pet) {
     return`
         <li class="pet-card">
-            <p>${pet.breeds.primary}</p>
-            <p>${pet.age}</p>
-            <p>${pet.gender}</p>  
-            <p>${pet.size}</p> 
-            <p>${pet.description}</p> 
+            <p>Pet Breed<br>${pet.breeds.primary}</p>
+            <p>Age<br>${pet.age}</p>
+            <p>Gender<br>${pet.gender}</p>  
+            <p>Size<br>${pet.size}</p> 
+            <p>Description<br>${pet.description}</p> 
         </li>
     `;
 }
