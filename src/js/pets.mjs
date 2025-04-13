@@ -6,6 +6,8 @@ function petCardTemplate(pet) {
             <p>${pet.breeds.primary}</p>
             <p>${pet.age}</p>
             <p>${pet.gender}</p>  
+            <p>${pet.size}</p> 
+            <p>${pet.description}</p> 
         </li>
     `;
 }

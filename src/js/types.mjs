@@ -4,7 +4,9 @@ function typeCardTemplate(type) {
     return`
         <li class="type-card">
             <p>${type.name}</p>
-            
+            <p>${type.coats}</p>
+            <p>${type.genders}</p>
+            <p>${type.colors}</p>
         </li>
     `;
 }
