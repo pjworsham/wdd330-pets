@@ -15,6 +15,20 @@ export default class ExternalServices {
     return data.animals;
   }
 
+  async getAllTypes() {
+    const typeURL = "https://api.petfinder.com/v2/types"
+
+    const accessToken = await this.getAccessToken();
+    let response = await fetch(typeURL, {
+      headers: {
+        "Authorization": `Bearer ${accessToken}`
+      }
+    });
+  
+    const data = await response.json();
+    return data.types;
+  }
+
   // return generated access token
   async getAccessToken() {
     const clientId = import.meta.env.VITE_CLIENT_ID;
@@ -47,3 +61,4 @@ export default class ExternalServices {
     }
   }
 }
+

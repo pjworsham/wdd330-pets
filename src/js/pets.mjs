@@ -3,16 +3,12 @@ import { renderListWithTemplate } from "./utils.mjs";
 function petCardTemplate(pet) {
     return`
         <li class="pet-card">
-        <a href='/animals/${pet.id}
             <p>${pet.breeds.primary}</p>
             <p>${pet.age}</p>
-            <p>${pet.gender}</p>
+            <p>${pet.gender}</p>  
         </li>
     `;
 }
-
-
-
 export default class Pets {
     constructor(dataSource, petList) {
         this.dataSource = dataSource;
