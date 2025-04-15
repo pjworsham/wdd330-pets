@@ -54,7 +54,12 @@ header h1 {
  }
 
  .pet-card:hover {
-    background-color: #b8f6eb;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+ }
+
+ .pet-card {
+     transition: transfor 0.03s, box-shadow 0.3s;
  }
 
 .pet-list {
@@ -65,6 +70,9 @@ header h1 {
     padding: 0px;
     max-width: 75%;
 }
+
+
+
 li p {
     margin: 1rem;
 }
@@ -81,6 +89,11 @@ footer {
     margin: 0 auto;
     padding: 0;
 }
+
+/* This is CSS for Types Page */
+
+
+
 
 
  
