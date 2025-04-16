@@ -21,8 +21,8 @@ export default class Pets {
     async init() {
         const list = await this.dataSource.getAllAnimals()
         this.renderList(list);
-        this.favoritePet();
-        this.renderfavorites(list);
+        this.favoritePet(list);
+        this.renderfavorites();
     }
 
     // render after doing the first stretch
@@ -31,25 +31,23 @@ export default class Pets {
     }
 
     // add favorite to local storage
-    favoritePet() {
+    favoritePet(list) {
         const favoriteButtons = document.querySelectorAll(".favorite-button")
         favoriteButtons.forEach(button => {
             button.addEventListener("click", function(event) {
-                let pets = JSON.parse(localStorage.getItem("pets")) || []
-                // console.log(event.target.dataset.id)
-                pets.push(event.target.dataset.id);
-                localStorage.setItem("pets", JSON.stringify(pets));
+                let favoritedPets = JSON.parse(localStorage.getItem("pets")) || []
+                let newFavorite = list.filter(pet => pet.id == event.target.dataset.id)
+                favoritedPets.push(newFavorite[0].breeds.primary);
+                localStorage.setItem("pets", JSON.stringify(favoritedPets));
             })
         })
     }
 
-    renderfavorites(list) {
+    renderfavorites() {
         const favoritesSelector = document.querySelector(".favorites")
         const favoritePets = JSON.parse(localStorage.getItem("pets")) || []
-        let filteredPets = list.filter(pet => favoritePets.includes(`${pet.id}`))
-        filteredPets.forEach(pet => {
-            console.log(pet)
-            favoritesSelector.innerHTML += `<p>${pet.breeds.primary}</p>`
+        favoritePets.forEach(pet => {
+            favoritesSelector.innerHTML += `<p>${pet}</p>`
         })
     }
 }
