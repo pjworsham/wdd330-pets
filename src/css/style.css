@@ -16,14 +16,13 @@ html {
     background-color: #eee5d5;
 }
 
-
 header {
    background-color: #6ca8b3;
    font-size: large;
    padding-top: 6px;
-   padding-bottom: 6px;
-   
+   padding-bottom: 6px; 
 }
+
 header h1 {
     text-align: center;
     font-size: 20px;
@@ -38,14 +37,16 @@ header h1 {
   }
 
 #pet-list h2 {
-    /* background-color: orange; */
     text-align: center;
     font-size: 25px;
     margin: 6px;
 
+
 }
 
-.pet-card {
+
+
+.pet-card, .type-card {
     background-color: #b5dfe1;
     list-style-type: none;
     border-radius: 3%;
@@ -59,16 +60,21 @@ header h1 {
  }
 
  .pet-card {
-     transition: transfor 0.03s, box-shadow 0.3s;
+     transition: transform 0.03s, box-shadow 0.3s;
  }
 
-.pet-list {
+.pet-list, .types-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     margin: 0 auto;
     padding: 0px;
     max-width: 75%;
+    text-overflow: ellipsis;
+    white-space: normal; /* allow wrapping */
+    word-wrap: break-word; /* break long words */
+    box-sizing: border-box;
+    
 }
 
 
@@ -91,6 +97,34 @@ footer {
 }
 
 /* This is CSS for Types Page */
+
+.pTypes {
+    text-align: center;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.type-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+ }
+
+ .type-card {
+     transition: transform 0.03s, box-shadow 0.3s;
+ }
+ 
+ 
+
+
+
+
+
+
+ 
+    
 
 
 

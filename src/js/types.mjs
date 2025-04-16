@@ -3,10 +3,10 @@ import { renderListWithTemplate } from "./utils.mjs";
 function typeCardTemplate(type) {
     return`
         <li class="type-card">
-            <p>${type.name}</p>
-            <p>${type.coats}</p>
-            <p>${type.genders}</p>
-            <p>${type.colors}</p>
+            <p class= name>${type.name}</p>
+            <p class= coats>${type.coats}</p>
+            <p class= genders>${type.genders}</p>
+            <p class= colors>${type.colors}</p>
         </li>
     `;
 }
