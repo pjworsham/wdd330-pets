@@ -44,7 +44,15 @@ header h1 {
 
 }
 
-
+.favorite-button {
+    background-color: white;
+    list-style-type: none;
+    border-radius: 3%;
+    border: 2px solid gray;
+    box-shadow: 8px 6px 8px rgb(0, 0, 0);
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
 
 .pet-card, .type-card {
     background-color: #b5dfe1;
@@ -70,14 +78,37 @@ header h1 {
     margin: 0 auto;
     padding: 0px;
     max-width: 75%;
-    text-overflow: ellipsis;
+    /* text-overflow: ellipsis; */
     white-space: normal; /* allow wrapping */
     word-wrap: break-word; /* break long words */
     box-sizing: border-box;
     
 }
 
+#pet-list h3 {
+    background-color: white;
+    list-style-type: none;
+    border-radius: 3%;
+    border: 3px solid gray;
+    box-shadow: 6px 6px 8px rgb(0, 0, 0.05);
+    text-align: center;
+    max-width: 55%;
+    margin: 0 auto;
+    margin-bottom: .5rem;
 
+}
+
+.favorites p {
+    background-color: white;
+    list-style-type: none;
+    border-radius: 3%;
+    border: 3px solid gray;
+    box-shadow: 6px 6px 8px rgb(0, 0, 0.05);
+    text-align: center;
+    max-width: 55%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
 
 li p {
     margin: 1rem;
@@ -115,7 +146,7 @@ footer {
  .type-card {
      transition: transform 0.03s, box-shadow 0.3s;
  }
- 
+
  
  
 

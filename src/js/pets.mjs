@@ -39,8 +39,11 @@ export default class Pets {
                 let newFavorite = list.filter(pet => pet.id == event.target.dataset.id)
                 favoritedPets.push(newFavorite[0].breeds.primary);
                 localStorage.setItem("pets", JSON.stringify(favoritedPets));
+
+                window.location.reload();
             })
         })
+        
     }
 
     renderfavorites() {
